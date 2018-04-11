@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="vue/vue.js">
+    </script>
+</head>
+
+<body>
+    <div id="exercise">
+        <!-- 1) Show an alert when the Button gets clicked -->
+        <div>
+            <button v-on:click="alert">Show Alert</button>
+        </div>
+        <!-- 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) -->
+        <div>
+            <input type="text">
+            <p>{{ value }}</p>
+        </div>
+        <!-- 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key -->
+        <div>
+            <input type="text">
+            <p>{{ value }}</p>
+        </div>
+    </div>
+
+
+    <script>
+        new Vue({
+            el: '#exercise',
+            data: {
+                YOUR_NAME: 'Wojtek',
+                AGE: 30,
+                image: 'http://downloadt.advantech.com/download/downloadlit.aspx?LIT_ID=6a0d0a37-30cc-4cc7-951b-d151593d3795'
+            },
+            methods: {
+                alert: function() {
+                    alert('Alert!!!');
+                },
+                randomNumber: function() {
+                    return Math.random();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
