@@ -33,6 +33,7 @@
 		created() {
 			eventBus.$on('ageWasEdited', (age) => {
 				this.userAge = age;
+
 			});
 
 		}

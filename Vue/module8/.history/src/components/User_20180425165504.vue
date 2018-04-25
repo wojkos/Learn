@@ -11,9 +11,7 @@
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit 
-                    :userAge="age"
-                    @ageWasEdited="age = $event"
-                ></app-user-edit>
+                :userAge="age"></app-user-edit>
             </div>
         </div>
     </div>
