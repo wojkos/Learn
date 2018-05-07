@@ -2,18 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <button class="btn" @click="selectComponent = 'appQuote'">Quote</button>
-                <button class="btn" @click="selectComponent = 'appAuthor'">Author</button>
-                <button class="btn" @click="selectComponent = 'appNew'">New</button>
-                <hr>
-                <p>{{ selectComponent }}</p>
-                <keep-alive>
-                    <component :is="selectComponent"></component>
-                </keep-alive>
-               <!-- <appQuote>
+               <appQuote>
                     <h2 slot="title">{{ quoteTitle }}</h2>
                     <p>Time is change...</p>
-               </appQuote> -->
+               </appQuote>
             </div>
         </div>
     </div>
@@ -26,8 +18,7 @@
     export default {
         data: function() {
             return {
-                quoteTitle: 'The Quote',
-                selectComponent: 'appQuote'
+                quoteTitle: 'The Quote'
             }
         },
         components: {

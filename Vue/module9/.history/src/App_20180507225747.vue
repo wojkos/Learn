@@ -7,9 +7,7 @@
                 <button class="btn" @click="selectComponent = 'appNew'">New</button>
                 <hr>
                 <p>{{ selectComponent }}</p>
-                <keep-alive>
-                    <component :is="selectComponent"></component>
-                </keep-alive>
+                <component :is="selectComponent"></component>
                <!-- <appQuote>
                     <h2 slot="title">{{ quoteTitle }}</h2>
                     <p>Time is change...</p>
