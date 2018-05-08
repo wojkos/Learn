@@ -16,7 +16,7 @@
     export default {
         data: function() {
             return {
-                quotes: ''
+                quote: ''
             };
         },
         methods: {
@@ -24,7 +24,7 @@
                 this.$emit('quoteAdded', this.quote);
                 this.quote = '';
             }
-            
+
         }
     }
 </script>
