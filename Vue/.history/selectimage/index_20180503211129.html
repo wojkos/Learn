@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue/vue.js">
+    </script>
+</head>
+
+<body>
+    <div id="app" v-on:mousemove="updateCoordinates">
+        <p>Coordinates: {{ x }} | {{ y }}</p>
+        <span v-on:mousemove="dummy">---DEAD SPOT---</span>
+        <hr>
+        <span v-on:mousemove.stop="">---DEAD SPOT 2---</span>
+    </div>
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                x: 0,
+                y: 0
+            },
+            methods: {
+                updateCoordinates: function() {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                },
+                dummy: function() {
+                    event.stopPropagation();
+                },
+                alertMe: function() {
+                    alert('Alert!');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
