@@ -21,6 +21,17 @@ Vue.directive('highlight', {
     }
 });
 
+Vue.directive('myOn', {
+    bind(el, binding) {
+        // el.onClick = function() {
+        //     binding.value();
+        // }
+        const type = binding.arg;
+        const fn = binding.value;
+        el.addEventListener(type, fn);
+    }
+})
+
 new Vue({
     el: '#app',
     render: h => h(App)
