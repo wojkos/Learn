@@ -5,7 +5,9 @@
                 <h1>Routing</h1>
                 <hr>
                 <router-view name="headerTop"></router-view>
-                <router-view></router-view>
+                <transition name="fade" mode="out-in">
+                    <router-view></router-view>
+                </transition>  
                 <router-view name="headerBottom"></router-view>
             </div>
         </div>
@@ -22,4 +24,16 @@ import Header from  './Header.vue';
 </script>
 
 <style>
+.fade-enter {
+        opacity: 0;
+    }
+
+    .fade-enter-active {
+        transition: opacity .5s;
+    }
+
+    .fade-leave-active {
+        transition: opacity .5s;
+        opacity: 0;
+    }
 </style>
